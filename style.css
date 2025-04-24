@@ -114,12 +114,12 @@ header{
 }
 
 .gaming-text{
-    font-size: 120px;
+    font-size: 110px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     position: absolute;
     right: 20px;
-    bottom: 30px;
+    bottom: 120px;
 }
 
 .next-btn{
@@ -147,4 +147,44 @@ header{
     height: 200px;
     opacity: 1;
     box-shadow:  0 0 15px rgba(255, 255, 255, 0.616);
+}
+
+.about-section{
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.image-box{
+    width: 360px;
+    height: 510px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-section p{
+    font-size: 12px;
+}
+
+.about-section h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    min-width: 1150px;
+    text-align: center;
+    margin: 25px 0;
+    text-transform: uppercase;
 }
