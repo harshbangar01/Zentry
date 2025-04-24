@@ -24,8 +24,8 @@ header{
     justify-content: space-between;
     padding: 10px 40px;
     z-index: 999;
-    background-color: #4b4b4b5b;
-    backdrop-filter:blur(10px);
+    /* background-color: #4b4b4b5b; */
+    /* backdrop-filter:blur(0.5px); */
 }
 
 .head-left{
@@ -34,8 +34,8 @@ header{
 }
 
 .head-left img{
-    width: 100px;
-    height: 75px;
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
 }
 
@@ -84,7 +84,7 @@ header{
 }
 
 .hero-info h1{
-    font-size: 120;
+    font-size: 120px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -104,10 +104,47 @@ header{
     border-radius: 20px;
     cursor: pointer;
     color: black;
+    transition: 0.3s;
 }
 
 .hero-info button:hover{
     background-color: transparent;
     color: white;
     box-shadow: 0 0 15px #edff66;
+}
+
+.gaming-text{
+    font-size: 120px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+}
+
+.next-btn{
+    width: 200px;
+    height: 200px;
+    background-color: #edff66b6;
+    position: absolute;
+    left: 45%;
+    bottom: 45%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.next-btn:hover{
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    box-shadow:  0 0 15px rgba(255, 255, 255, 0.616);
 }
