@@ -330,7 +330,8 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    margin-bottom: 100px;
 }
 
 .contact-section .img1{
@@ -352,8 +353,193 @@ header{
 .contact-section .img3{
     position: absolute;
     left: 5%;
-    bottom: 10%;
+    bottom: 5%;
     height: 250px;
     width: 250px;
     clip-path: polygon(0 1%, 63% 2%, 83% 99%, 11% 100%);
+}
+
+.contact-section p {
+    margin-top: 100px;
+}
+
+.contact-section h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    max-width: 550px;
+    text-align: center;
+     background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a,#6070fd,#2a46ff,#0099ff,#4acfee);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+.contact-section button{
+    padding: 10px 25px;
+    border: 1px solid gray;
+    background-color: #0f1217;
+    color: gray;
+    border-radius: 20px;
+    box-shadow: 0 0 5px lightgray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-section button:hover{
+    box-shadow: 0 0 15px lightgray;
+    opacity: 0.7;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(211, 211, 211, 0.21);
+    backdrop-filter: blur(10px);
+    height: 100px;
+}
+
+.footer p{
+    margin: 0 20px;
+}
+
+.footer ul{
+    display: flex;
+    list-style: none;
+    margin-right: 140px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 7px 7px;
+    border-radius: 50px;
+    border: 1px solid rgb(0, 130, 211);
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+.stones-img{
+    position: absolute;
+    margin-top: 22%;
+    width: 500px;
+}
+
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    40%,60%{
+        filter: blur(0);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+.autoTakeFull{
+    animation: autoTakeFullAnimation both;
+    animation-timeline: view(70% 65%);
+}
+@keyframes autoFullAnimation {
+    to{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin-bottom: 100px;
+    }
+}
+
+.autoDisplay{
+    animation:  autoDisplayAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoDisplayAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media screen and (max-width: 650px){
+    header{
+        padding: 0 10px;
+    }
+    .head-left button{
+        display: none;
+    }
+    .head-right a{
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .hero-info{
+        left: 5%;
+    }
+    .hero-section h1{
+        font-size: 90px;
+    }
+    .next-btn{
+        left: 25%;
+        top: 40%;
+    }
+    .about-section{
+        margin: 0;
+    }
+    .about-section h1{
+        font-size: 50px;
+    }
+    .image-box{
+        height: 500px;
+        width: 300px;
+    }
+    .about-section h4, .about-section h5{
+        max-width: 350px;
+        text-align: center;
+    }
+    .contact-section .img1{
+        width: 150px;
+        height: 200px;
+        right: 0;
+        top: 20px;
+    }
+    .contact-section .img2{
+        top: 30px;
+        left: -40px;
+        width: 180px;
+        height: 180px;
+    }
+    .contact-section .img3{
+        left: -40px;
+        bottom: 0;
+        width: 150px;
+        height: 180px;
+    }
+    .contact-section h1{
+        font-size: 60px;
+        max-width: 300px;
+    }
+    .footer p{
+        display: none;
+    }
+    .footer ul{
+        margin-left: 70px;
+    }
+    .stones-img{
+        margin-top: 80%;
+        width: 400px;
+    }
 }
